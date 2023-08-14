@@ -1,0 +1,9 @@
+---
+ - name: debug&register
+   hosts: all
+   tasks:
+     - name: server kernel
+       command: uname -a
+       register: nbabu
+     - debug:
+         var: nbabu.stdout
